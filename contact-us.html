@@ -68,6 +68,7 @@
                     <h2>Send us a Message</h2>
                     
                     <!-- Netlify Form - Contact Form -->
+                    <!-- Note: Configure email notifications in Netlify Dashboard to send to: gulfetf@gmail.com, immy666@gmail.com -->
                     <form name="contact" method="POST" netlify data-netlify="true" netlify-honeypot="bot-field">
                         <!-- Honeypot field for spam protection (hidden) -->
                         <input type="hidden" name="form-name" value="contact">
@@ -87,7 +88,8 @@
 
                         <div class="form-group">
                             <label for="phone">Phone Number <span class="required">*</span></label>
-                            <input type="tel" id="phone" name="phone" required>
+                            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" minlength="10" maxlength="15" required>
+                            <small style="color: var(--light-text); font-size: 0.875rem;">Enter 10-digit mobile number or landline with area code</small>
                         </div>
 
                         <div class="form-group">

@@ -77,6 +77,7 @@
             </div>
 
             <!-- Netlify Form - Application Form with File Uploads -->
+            <!-- Note: Configure email notifications in Netlify Dashboard to send to: gulfetf@gmail.com, immy666@gmail.com -->
             <form name="admission" method="POST" netlify data-netlify="true" enctype="multipart/form-data" netlify-honeypot="bot-field">
                 <!-- Honeypot field for spam protection (hidden) -->
                 <input type="hidden" name="form-name" value="admission">
@@ -130,7 +131,8 @@
 
                         <div class="form-group">
                             <label for="phone">Phone Number <span class="required">*</span></label>
-                            <input type="tel" id="phone" name="phone" required>
+                            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" minlength="10" maxlength="15" required>
+                            <small style="color: var(--light-text); font-size: 0.875rem;">Enter 10-digit mobile number or landline with area code</small>
                         </div>
                     </div>
 
@@ -249,7 +251,7 @@
                 <div class="form-group checkbox-group">
                     <label>
                         <input type="checkbox" name="terms" required>
-                        I agree to the <a href="#" target="_blank">Terms and Conditions</a> and <a href="#" target="_blank">Privacy Policy</a> <span class="required">*</span>
+                        I agree to the <a href="terms-and-conditions.html" target="_blank">Terms and Conditions</a> and <a href="privacy-policy.html" target="_blank">Privacy Policy</a> <span class="required">*</span>
                     </label>
                 </div>
 
