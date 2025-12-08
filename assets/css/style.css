@@ -1168,64 +1168,27 @@ footer {
 
 /* What We Do / Services / Who We Are Section Styling */
 .services-section {
-    padding: 5rem 0;
-    background: linear-gradient(135deg, rgba(0, 43, 91, 0.03), rgba(74, 144, 226, 0.05));
-    position: relative;
-    overflow: hidden;
-}
-
-.services-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: radial-gradient(circle at 20% 50%, rgba(74, 144, 226, 0.05) 0%, transparent 50%),
-                radial-gradient(circle at 80% 50%, rgba(212, 167, 60, 0.05) 0%, transparent 50%);
-    pointer-events: none;
+    padding: 4rem 0;
+    background-color: var(--light-gray);
 }
 
 .service-card {
-    text-align: center;
-    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.4s ease;
-    position: relative;
+    padding: 1.5rem;
 }
 
-.service-card:hover {
-    transform: translateY(-10px);
-}
-
-
-.service-content-box {
-    background: white;
-    padding: 2.5rem;
-    border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-    border: 1px solid #e8e8e8;
-    min-height: 280px;
-    display: flex;
-    flex-direction: column;
-    transition: box-shadow 0.3s ease;
-}
-
-.service-card:hover .service-content-box {
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
-}
-
-.service-content-box h3 {
+.service-card h3 {
     color: var(--navy-blue);
-    margin-bottom: 1.25rem;
+    margin-bottom: 1rem;
     font-size: 1.75rem;
     font-weight: 700;
+    text-align: center;
 }
 
-.service-content-box p {
+.service-card p {
     color: var(--dark-text);
-    line-height: 1.9;
+    line-height: 1.8;
     text-align: left;
-    font-size: 1.05rem;
-    flex-grow: 1;
+    font-size: 1rem;
     margin: 0;
 }
 
