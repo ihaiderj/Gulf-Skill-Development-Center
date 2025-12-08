@@ -227,12 +227,12 @@ function setupFilePreview(input, uploadArea, previewArea, fileNameSpan, changeBt
 
 // Form Submission Handling
 function setupFormSubmission() {
-    const forms = document.querySelectorAll('form[netlify], form[data-netlify]');
+    // Only handle forms with PHP actions, let Netlify forms submit naturally
+    const phpForms = document.querySelectorAll('form[action*=".php"]');
     
-    forms.forEach(form => {
+    phpForms.forEach(form => {
         form.addEventListener('submit', async function(e) {
-            // If using Netlify, let it handle naturally
-            // If using custom PHP endpoint, handle with fetch
+            // Only handle PHP forms, let Netlify handle its own forms
             const formAction = form.getAttribute('action');
             
             if (formAction && formAction.includes('.php')) {
