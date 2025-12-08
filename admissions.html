@@ -78,7 +78,7 @@
 
             <!-- Netlify Form - Application Form with File Uploads -->
             <!-- Note: Configure email notifications in Netlify Dashboard to send to: gulfetf@gmail.com, immy666@gmail.com -->
-            <form name="admission" method="POST" netlify data-netlify="true" data-netlify-redirect="/form-success.html" enctype="multipart/form-data" netlify-honeypot="bot-field">
+            <form name="admission" method="POST" netlify data-netlify="true" data-netlify-redirect="/form-success.html" enctype="multipart/form-data" netlify-honeypot="bot-field" id="admission-form">
                 <!-- Honeypot field for spam protection (hidden) -->
                 <input type="hidden" name="form-name" value="admission">
                 <p style="display: none;">
@@ -197,30 +197,94 @@
                 <!-- Documents Upload -->
                 <fieldset>
                     <legend>Documents Upload</legend>
-                    <p class="upload-note">Please upload scanned copies of the following documents (PDF, JPG, or PNG format, max 10MB each)</p>
+                    <p class="upload-note" style="margin-bottom: 1.5rem; color: var(--light-text);">Please upload scanned copies of the following documents (PDF, JPG, or PNG format, max 10MB each)</p>
 
                     <div class="form-group">
-                        <label for="photo">Passport Size Photo <span class="required">*</span></label>
-                        <input type="file" id="photo" name="photo" accept="image/*" required>
-                        <small>Accepted formats: JPG, PNG (Max 10MB)</small>
+                        <label for="photo">Passport Size Photo</label>
+                        <div class="file-upload-wrapper">
+                            <div class="file-upload-area" data-for="photo">
+                                <input type="file" id="photo" name="photo" accept="image/jpeg,image/jpg,image/png">
+                                <label for="photo">
+                                    <span class="upload-icon">📷</span>
+                                    <span class="upload-text">Click to upload or drag and drop</span>
+                                    <span class="upload-hint">JPG, PNG (Max 10MB)</span>
+                                </label>
+                            </div>
+                            <div class="file-preview" id="photo-preview" style="display: none;">
+                                <span class="file-icon">📄</span>
+                                <span class="file-name" id="photo-name"></span>
+                                <div class="file-actions">
+                                    <button type="button" class="btn-change" onclick="document.getElementById('photo').click()">Change</button>
+                                    <button type="button" class="btn-delete" onclick="clearFile('photo')">Delete</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="form-group">
-                        <label for="aadhar">Aadhar Card <span class="required">*</span></label>
-                        <input type="file" id="aadhar" name="aadhar" accept=".pdf,.jpg,.jpeg,.png" required>
-                        <small>Accepted formats: PDF, JPG, PNG (Max 10MB)</small>
+                        <label for="aadhar">Aadhar Card</label>
+                        <div class="file-upload-wrapper">
+                            <div class="file-upload-area" data-for="aadhar">
+                                <input type="file" id="aadhar" name="aadhar" accept=".pdf,.jpg,.jpeg,.png,application/pdf,image/jpeg,image/jpg,image/png">
+                                <label for="aadhar">
+                                    <span class="upload-icon">📄</span>
+                                    <span class="upload-text">Click to upload or drag and drop</span>
+                                    <span class="upload-hint">PDF, JPG, PNG (Max 10MB)</span>
+                                </label>
+                            </div>
+                            <div class="file-preview" id="aadhar-preview" style="display: none;">
+                                <span class="file-icon">📄</span>
+                                <span class="file-name" id="aadhar-name"></span>
+                                <div class="file-actions">
+                                    <button type="button" class="btn-change" onclick="document.getElementById('aadhar').click()">Change</button>
+                                    <button type="button" class="btn-delete" onclick="clearFile('aadhar')">Delete</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="form-group">
                         <label for="education-cert">Educational Certificates</label>
-                        <input type="file" id="education-cert" name="education-cert" accept=".pdf,.jpg,.jpeg,.png">
-                        <small>Accepted formats: PDF, JPG, PNG (Max 10MB)</small>
+                        <div class="file-upload-wrapper">
+                            <div class="file-upload-area" data-for="education-cert">
+                                <input type="file" id="education-cert" name="education-cert" accept=".pdf,.jpg,.jpeg,.png,application/pdf,image/jpeg,image/jpg,image/png">
+                                <label for="education-cert">
+                                    <span class="upload-icon">📄</span>
+                                    <span class="upload-text">Click to upload or drag and drop</span>
+                                    <span class="upload-hint">PDF, JPG, PNG (Max 10MB)</span>
+                                </label>
+                            </div>
+                            <div class="file-preview" id="education-cert-preview" style="display: none;">
+                                <span class="file-icon">📄</span>
+                                <span class="file-name" id="education-cert-name"></span>
+                                <div class="file-actions">
+                                    <button type="button" class="btn-change" onclick="document.getElementById('education-cert').click()">Change</button>
+                                    <button type="button" class="btn-delete" onclick="clearFile('education-cert')">Delete</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="form-group">
                         <label for="passport">Passport (if available)</label>
-                        <input type="file" id="passport" name="passport" accept=".pdf,.jpg,.jpeg,.png">
-                        <small>Accepted formats: PDF, JPG, PNG (Max 10MB)</small>
+                        <div class="file-upload-wrapper">
+                            <div class="file-upload-area" data-for="passport">
+                                <input type="file" id="passport" name="passport" accept=".pdf,.jpg,.jpeg,.png,application/pdf,image/jpeg,image/jpg,image/png">
+                                <label for="passport">
+                                    <span class="upload-icon">📄</span>
+                                    <span class="upload-text">Click to upload or drag and drop</span>
+                                    <span class="upload-hint">PDF, JPG, PNG (Max 10MB)</span>
+                                </label>
+                            </div>
+                            <div class="file-preview" id="passport-preview" style="display: none;">
+                                <span class="file-icon">📄</span>
+                                <span class="file-name" id="passport-name"></span>
+                                <div class="file-actions">
+                                    <button type="button" class="btn-change" onclick="document.getElementById('passport').click()">Change</button>
+                                    <button type="button" class="btn-delete" onclick="clearFile('passport')">Delete</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </fieldset>
 
@@ -317,6 +381,89 @@
     </footer>
 
     <script src="assets/js/main.js"></script>
+    <script>
+        // File upload handling for admission form
+        function setupFileUploadHandlers() {
+            const fileInputs = ['photo', 'aadhar', 'education-cert', 'passport'];
+            
+            fileInputs.forEach(inputId => {
+                const input = document.getElementById(inputId);
+                const preview = document.getElementById(inputId + '-preview');
+                const fileName = document.getElementById(inputId + '-name');
+                const uploadArea = document.querySelector(`.file-upload-area[data-for="${inputId}"]`);
+                
+                if (!input) return;
+                
+                // File change handler
+                input.addEventListener('change', function(e) {
+                    if (this.files.length > 0) {
+                        const file = this.files[0];
+                        const maxSize = 10 * 1024 * 1024; // 10MB
+                        
+                        // Validate file size
+                        if (file.size > maxSize) {
+                            alert('File size exceeds 10MB limit. Please choose a smaller file.');
+                            this.value = '';
+                            return;
+                        }
+                        
+                        // Show preview
+                        if (uploadArea) uploadArea.style.display = 'none';
+                        if (preview) {
+                            preview.style.display = 'flex';
+                            preview.classList.add('active');
+                        }
+                        if (fileName) fileName.textContent = file.name;
+                    }
+                });
+                
+                // Drag and drop handlers
+                if (uploadArea) {
+                    uploadArea.addEventListener('dragover', function(e) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        this.classList.add('dragover');
+                    });
+                    
+                    uploadArea.addEventListener('dragleave', function(e) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        this.classList.remove('dragover');
+                    });
+                    
+                    uploadArea.addEventListener('drop', function(e) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        this.classList.remove('dragover');
+                        
+                        if (e.dataTransfer.files.length > 0) {
+                            input.files = e.dataTransfer.files;
+                            input.dispatchEvent(new Event('change'));
+                        }
+                    });
+                }
+            });
+        }
+        
+        // Clear file function
+        function clearFile(inputId) {
+            const input = document.getElementById(inputId);
+            const preview = document.getElementById(inputId + '-preview');
+            const uploadArea = document.querySelector(`.file-upload-area[data-for="${inputId}"]`);
+            
+            if (input) input.value = '';
+            if (preview) {
+                preview.style.display = 'none';
+                preview.classList.remove('active');
+            }
+            if (uploadArea) uploadArea.style.display = 'block';
+        }
+        
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            setupFileUploadHandlers();
+        });
+    </script>
 </body>
 </html>
 

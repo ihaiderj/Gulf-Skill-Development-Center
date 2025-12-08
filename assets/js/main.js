@@ -26,15 +26,28 @@ document.addEventListener('DOMContentLoaded', function() {
     // Hero Image Rotation
     initHeroImageRotation();
     
-    // File Upload Preview Functionality
-    setupFileUpload('photo');
-    setupFileUpload('aadhar');
-    setupFileUpload('certificates');
-    setupFileUpload('passport');
-    setupFileUpload('education-cert');
+    // File Upload Preview Functionality (only if file upload wrappers exist)
+    // Note: Admission form uses simple file inputs, so preview setup is optional
+    const photoInput = document.getElementById('photo');
+    if (photoInput && photoInput.closest('.file-upload-wrapper, .file-upload')) {
+        setupFileUpload('photo');
+        setupFileUpload('aadhar');
+        setupFileUpload('certificates');
+        setupFileUpload('passport');
+        setupFileUpload('education-cert');
+    }
     
     // Form Submission Handling
     setupFormSubmission();
+    
+    // Debug: Log form submission attempts for admission form
+    const admissionForm = document.getElementById('admission-form');
+    if (admissionForm) {
+        admissionForm.addEventListener('submit', function(e) {
+            console.log('Admission form submit event triggered');
+            // Don't prevent default - let Netlify handle it
+        });
+    }
 });
 
 // Highlight Active Navigation Item
@@ -229,6 +242,13 @@ function setupFilePreview(input, uploadArea, previewArea, fileNameSpan, changeBt
 function setupFormSubmission() {
     // Only handle forms with PHP actions, let Netlify forms submit naturally
     const phpForms = document.querySelectorAll('form[action*=".php"]');
+    
+    // Ensure Netlify forms are NOT interfered with
+    const netlifyForms = document.querySelectorAll('form[netlify], form[data-netlify]');
+    netlifyForms.forEach(form => {
+        // Remove any existing submit handlers that might interfere
+        form.onsubmit = null;
+    });
     
     phpForms.forEach(form => {
         form.addEventListener('submit', async function(e) {
