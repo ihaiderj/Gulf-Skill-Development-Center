@@ -866,10 +866,6 @@ button[type="submit"]:not(.btn):active {
     transform: translateY(-1px);
     box-shadow: 0 4px 12px rgba(212, 167, 60, 0.3);
 }
-    margin-top: var(--spacing-lg);
-    padding-top: var(--spacing-md);
-    border-top: 2px solid #e0e0e0;
-}
 
 /* File Upload */
 .file-upload {
