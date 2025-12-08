@@ -20,6 +20,12 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
+    // Highlight Active Navigation Item
+    highlightActiveNavItem();
+    
+    // Hero Image Rotation
+    initHeroImageRotation();
+    
     // File Upload Preview Functionality
     setupFileUpload('photo');
     setupFileUpload('aadhar');
@@ -30,6 +36,84 @@ document.addEventListener('DOMContentLoaded', function() {
     // Form Submission Handling
     setupFormSubmission();
 });
+
+// Highlight Active Navigation Item
+function highlightActiveNavItem() {
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    const navLinks = document.querySelectorAll('nav ul li a');
+    
+    // Page mapping for navigation
+    const pageMap = {
+        'index.html': 'Home',
+        'about-us.html': 'About',
+        'courses.html': 'Courses',
+        'trade-test-preparation.html': 'Trade Test',
+        'admissions.html': 'Admissions',
+        'placement-support.html': 'Placement',
+        'gallery.html': 'Gallery',
+        'contact-us.html': 'Contact'
+    };
+    
+    // Also check for course pages
+    if (currentPage.includes('ac-refrigeration') || 
+        currentPage.includes('electrical') || 
+        currentPage.includes('plumbing') || 
+        currentPage.includes('welding') || 
+        currentPage.includes('fire-safety') || 
+        currentPage.includes('driving') || 
+        currentPage.includes('mechanical-fabrication') || 
+        currentPage.includes('hospitality-housekeeping')) {
+        pageMap[currentPage] = 'Courses';
+    }
+    
+    navLinks.forEach(link => {
+        const linkText = link.textContent.trim();
+        const linkHref = link.getAttribute('href');
+        
+        // Remove active class from all links
+        link.classList.remove('active');
+        
+        // Check if current page matches
+        if (linkHref === currentPage || 
+            (currentPage === '' && linkHref === 'index.html') ||
+            (currentPage === 'index.html' && linkHref === 'index.html')) {
+            link.classList.add('active');
+        } else if (pageMap[currentPage] && linkText === pageMap[currentPage]) {
+            link.classList.add('active');
+        }
+    });
+}
+
+// Hero Image Rotation Function
+function initHeroImageRotation() {
+    const heroSlides = document.querySelectorAll('.hero-slide');
+    if (heroSlides.length === 0) return;
+    
+    let currentSlide = 0;
+    const totalSlides = heroSlides.length;
+    const rotationInterval = 5000; // 5 seconds between rotations
+    
+    function showSlide(index) {
+        // Remove active class from all slides
+        heroSlides.forEach(slide => slide.classList.remove('active'));
+        
+        // Add active class to current slide
+        if (heroSlides[index]) {
+            heroSlides[index].classList.add('active');
+        }
+    }
+    
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % totalSlides;
+        showSlide(currentSlide);
+    }
+    
+    // Initialize: show first slide
+    showSlide(0);
+    
+    // Rotate images every 5 seconds
+    setInterval(nextSlide, rotationInterval);
+}
 
 // File Upload Preview Setup
 function setupFileUpload(inputId) {
