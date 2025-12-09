@@ -47,3 +47,4 @@ After configuration:
 - Check spam folders if emails don't arrive
 - Netlify sends form data in the email body by default
 
+
