@@ -26,6 +26,9 @@ document.addEventListener('DOMContentLoaded', function() {
     // Hero Image Rotation
     initHeroImageRotation();
     
+    // Certificate Search Functionality
+    initCertificateSearch();
+    
     // File Upload Preview Functionality (only if file upload wrappers exist)
     // Note: Admission form uses simple file inputs, so preview setup is optional
     const photoInput = document.getElementById('photo');
@@ -464,4 +467,42 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+// Certificate Search Functionality
+function initCertificateSearch() {
+    const searchInput = document.getElementById('certificate-search');
+    const searchBtn = document.getElementById('search-btn');
+    
+    if (!searchInput || !searchBtn) return;
+    
+    function performSearch() {
+        const searchTerm = searchInput.value.trim();
+        
+        if (!searchTerm) {
+            alert('Please enter a certificate number or name to search.');
+            return;
+        }
+        
+        // Scroll to certificate section
+        const certificateSection = document.querySelector('.certificate-container');
+        if (certificateSection) {
+            certificateSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+        
+        // Here you can add actual search logic
+        // For now, just show the certificate
+        console.log('Searching for:', searchTerm);
+        // You can implement actual certificate verification logic here
+    }
+    
+    // Search on button click
+    searchBtn.addEventListener('click', performSearch);
+    
+    // Search on Enter key press
+    searchInput.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+            performSearch();
+        }
+    });
+}
 

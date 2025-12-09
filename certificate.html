@@ -10,6 +10,77 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <style>
+        .certificate-banner {
+            position: relative;
+            min-height: 50vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            text-align: center;
+            overflow: hidden;
+            background: linear-gradient(rgba(0, 43, 91, 0.7), rgba(0, 43, 91, 0.7)),
+                        url('assets/images/hero-bg5.jpg') center/cover no-repeat;
+        }
+        .certificate-banner-content {
+            position: relative;
+            z-index: 2;
+            padding: 2rem;
+            width: 100%;
+            max-width: 800px;
+        }
+        .certificate-banner h1 {
+            color: var(--white);
+            font-size: 3rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 2rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        .search-box-container {
+            display: flex;
+            gap: 1rem;
+            max-width: 600px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 1rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+        .search-box-container input {
+            flex: 1;
+            padding: 1rem 1.5rem;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+            outline: none;
+            transition: var(--transition);
+        }
+        .search-box-container input:focus {
+            border-color: #4A90E2;
+            box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
+        }
+        .search-box-container button {
+            padding: 1rem 2.5rem;
+            background: linear-gradient(135deg, #4A90E2 0%, #357ABD 100%);
+            color: var(--white);
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            white-space: nowrap;
+        }
+        .search-box-container button:hover {
+            background: linear-gradient(135deg, #357ABD 0%, #2A5F8F 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(74, 144, 226, 0.4);
+        }
+        .search-box-container button:active {
+            transform: translateY(0);
+        }
         .certificate-container {
             padding: 4rem 0;
             background-color: var(--light-gray);
@@ -22,6 +93,19 @@
             padding: 2rem;
             border-radius: 12px;
             box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+        }
+        @media (max-width: 768px) {
+            .certificate-banner h1 {
+                font-size: 2rem;
+            }
+            .search-box-container {
+                flex-direction: column;
+                padding: 1.5rem;
+            }
+            .search-box-container input,
+            .search-box-container button {
+                width: 100%;
+            }
         }
     </style>
 </head>
@@ -67,6 +151,17 @@
             </div>
         </div>
     </header>
+
+    <!-- Certificate Banner with Search -->
+    <section class="certificate-banner">
+        <div class="certificate-banner-content">
+            <!-- <h1>Certificate Verification</h1> -->
+            <div class="search-box-container">
+                <input type="text" id="certificate-search" placeholder="Search Passport Number" aria-label="Certificate search">
+                <button type="button" id="search-btn" class="btn-search">Search</button>
+            </div>
+        </div>
+    </section>
 
     <!-- Certificate Section -->
     <section class="certificate-container">
