@@ -105,6 +105,7 @@ function initHeroImageRotation() {
     let currentSlide = 0;
     const totalSlides = heroSlides.length;
     const rotationInterval = 5000; // 5 seconds between rotations
+    let rotationTimer = null;
     
     function showSlide(index) {
         // Remove active class from all slides
@@ -113,6 +114,7 @@ function initHeroImageRotation() {
         // Add active class to current slide
         if (heroSlides[index]) {
             heroSlides[index].classList.add('active');
+            currentSlide = index;
         }
     }
     
@@ -121,11 +123,43 @@ function initHeroImageRotation() {
         showSlide(currentSlide);
     }
     
+    function previousSlide() {
+        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+        showSlide(currentSlide);
+    }
+    
+    function resetRotationTimer() {
+        // Clear existing timer
+        if (rotationTimer) {
+            clearInterval(rotationTimer);
+        }
+        // Restart rotation timer
+        rotationTimer = setInterval(nextSlide, rotationInterval);
+    }
+    
     // Initialize: show first slide
     showSlide(0);
     
     // Rotate images every 5 seconds
-    setInterval(nextSlide, rotationInterval);
+    rotationTimer = setInterval(nextSlide, rotationInterval);
+    
+    // Arrow button navigation
+    const leftArrow = document.querySelector('.hero-arrow-left');
+    const rightArrow = document.querySelector('.hero-arrow-right');
+    
+    if (leftArrow) {
+        leftArrow.addEventListener('click', function() {
+            previousSlide();
+            resetRotationTimer(); // Reset timer after manual navigation
+        });
+    }
+    
+    if (rightArrow) {
+        rightArrow.addEventListener('click', function() {
+            nextSlide();
+            resetRotationTimer(); // Reset timer after manual navigation
+        });
+    }
 }
 
 // File Upload Preview Setup
