@@ -32,11 +32,28 @@
             padding: 4rem 0;
             background-color: var(--light-gray);
         }
+        .category-section {
+            margin-bottom: 3rem;
+        }
+        .category-section-title {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--navy-blue);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 3px solid #4A90E2;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        .category-section-title .emoji {
+            font-size: 2rem;
+        }
         .categories-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
             gap: 1.5rem;
-            margin-top: 2rem;
+            margin-top: 1rem;
         }
         .category-item {
             background: white;
@@ -69,6 +86,14 @@
             color: var(--navy-blue);
             font-size: 1rem;
             line-height: 1.5;
+        }
+        @media (max-width: 768px) {
+            .categories-grid {
+                grid-template-columns: 1fr;
+            }
+            .category-section-title {
+                font-size: 1.5rem;
+            }
         }
     </style>
 </head>
@@ -126,12 +151,802 @@
     <!-- Categories Section -->
     <section class="categories-section">
         <div class="container">
-            <!-- <div class="section-title">
-                <h2>Available Test Categories</h2>
-                <p>Select from 125+ test categories for Gulf trade tests</p>
-            </div> -->
-            <div class="categories-grid">
-                <div class="category-item">
+            <!-- Vehicle and Mechanical & Repairing -->
+            <div class="category-section">
+                <h2 class="category-section-title">
+                    <span class="emoji">🚗</span>
+                    <span>VEHICLE AND MECHANICAL & REPAIRING</span>
+                </h2>
+                <div class="categories-grid">
+                    <div class="category-item">
+                        <span class="category-number">1</span>
+                        <span class="category-name">Auto Mechanic</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">2</span>
+                        <span class="category-name">Auto Car Electrician</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">3</span>
+                        <span class="category-name">Auto Car Denter</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">4</span>
+                        <span class="category-name">Auto Car Spray Painter</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">5</span>
+                        <span class="category-name">Auto Car Wheel Alignment Technician</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">6</span>
+                        <span class="category-name">Heavy Vehicle Auto Electrician</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">7</span>
+                        <span class="category-name">Auto Heavy Vehicle Denter</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">8</span>
+                        <span class="category-name">Auto Heavy Vehicle Spray Painter</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">9</span>
+                        <span class="category-name">Auto Heavy Electrician</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">10</span>
+                        <span class="category-name">Diesel Mechanic (Up to 4 Cylinders)</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">11</span>
+                        <span class="category-name">Diesel Mechanic (Up to 6 Cylinders)</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">12</span>
+                        <span class="category-name">Diesel Pump Mechanic (F.I & Rotary)</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">13</span>
+                        <span class="category-name">Diesel Full Injector Pump Mechanic</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">14</span>
+                        <span class="category-name">Petrol Mechanic (4 Cylinder Engine)</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">15</span>
+                        <span class="category-name">Generator Alternator Mechanic</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">16</span>
+                        <span class="category-name">Radiator Mechanic</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- General Mechanical / Machinery -->
+            <div class="category-section">
+                <h2 class="category-section-title">
+                    <span class="emoji">🔧</span>
+                    <span>GENERAL MECHANICAL / MACHINERY</span>
+                </h2>
+                <div class="categories-grid">
+                    <div class="category-item">
+                        <span class="category-number">1</span>
+                        <span class="category-name">Machinist</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">2</span>
+                        <span class="category-name">C.N.C. Machine Operator</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">3</span>
+                        <span class="category-name">Lathe Machine Operator</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">4</span>
+                        <span class="category-name">Lathe Operator</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">5</span>
+                        <span class="category-name">Millwright Fitter</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">6</span>
+                        <span class="category-name">Die Maker</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">7</span>
+                        <span class="category-name">Hydraulic Mechanic</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">8</span>
+                        <span class="category-name">Hydraulic Heavy Equipment Mechanic</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">9</span>
+                        <span class="category-name">Tyre Man (Hydraulic Machine)</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">10</span>
+                        <span class="category-name">Tyre Man (By Hand)</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Civil / Construction -->
+            <div class="category-section">
+                <h2 class="category-section-title">
+                    <span class="emoji">🧱</span>
+                    <span>CIVIL / CONSTRUCTION</span>
+                </h2>
+                <div class="categories-grid">
+                    <div class="category-item">
+                        <span class="category-number">1</span>
+                        <span class="category-name">Builder</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">2</span>
+                        <span class="category-name">Construction Worker</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">3</span>
+                        <span class="category-name">Constructing Worker</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">4</span>
+                        <span class="category-name">Mason (All Rounder)</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">5</span>
+                        <span class="category-name">Mason (Brick & Plaster)</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">6</span>
+                        <span class="category-name">Mason (Tiles)</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">7</span>
+                        <span class="category-name">Mason Refractory</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">8</span>
+                        <span class="category-name">Stone Mason</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">9</span>
+                        <span class="category-name">Stone Carver</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">10</span>
+                        <span class="category-name">Bar Bender / Steel Fixer / RCC</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">11</span>
+                        <span class="category-name">Shuttering Carpenter</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">12</span>
+                        <span class="category-name">Concrete Finisher</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">13</span>
+                        <span class="category-name">Concrete Pump Operator</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">14</span>
+                        <span class="category-name">Asphalt / Concrete Plant Operator</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">15</span>
+                        <span class="category-name">Batching Plant Operator</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">16</span>
+                        <span class="category-name">Scaffolder</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">17</span>
+                        <span class="category-name">Pipe Fitter (Civil / Mechanical)</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">18</span>
+                        <span class="category-name">Pipe Operator</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">19</span>
+                        <span class="category-name">Demolition Worker</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">20</span>
+                        <span class="category-name">Drilling Worker</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">21</span>
+                        <span class="category-name">Gypsum Worker</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">22</span>
+                        <span class="category-name">Gypsum Mason (POP)</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">23</span>
+                        <span class="category-name">Gypsum Board Carpenter</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">24</span>
+                        <span class="category-name">Fall Ceiling Technician (Gypsum Board)</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">25</span>
+                        <span class="category-name">Roof Cleaning Worker</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">26</span>
+                        <span class="category-name">Roofing Sheet Metal Worker</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">27</span>
+                        <span class="category-name">Marble Cutter</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">28</span>
+                        <span class="category-name">Marble Mason (Cutting/Fixing)</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Carpentry & Wood Work -->
+            <div class="category-section">
+                <h2 class="category-section-title">
+                    <span class="emoji">🪚</span>
+                    <span>CARPENTRY & WOOD WORK</span>
+                </h2>
+                <div class="categories-grid">
+                    <div class="category-item">
+                        <span class="category-number">1</span>
+                        <span class="category-name">Carpenter</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">2</span>
+                        <span class="category-name">Construction Formwork Carpenter</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">3</span>
+                        <span class="category-name">Furniture Carpenter</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">4</span>
+                        <span class="category-name">Furniture Assembling Worker</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">5</span>
+                        <span class="category-name">Furniture / Finishing Carpenter</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">6</span>
+                        <span class="category-name">Carving Carpenter / Wood Carver</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Painting / Polishing -->
+            <div class="category-section">
+                <h2 class="category-section-title">
+                    <span class="emoji">🎨</span>
+                    <span>PAINTING / POLISHING</span>
+                </h2>
+                <div class="categories-grid">
+                    <div class="category-item">
+                        <span class="category-number">1</span>
+                        <span class="category-name">Painter</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">2</span>
+                        <span class="category-name">Products Spray Painter</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">3</span>
+                        <span class="category-name">Wall Painter</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">4</span>
+                        <span class="category-name">Wall Spray Painter</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">5</span>
+                        <span class="category-name">Spray Painter</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">6</span>
+                        <span class="category-name">Artist / Sign Board Painter</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">7</span>
+                        <span class="category-name">Metal Polisher</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">8</span>
+                        <span class="category-name">Polisher (Metal)</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">9</span>
+                        <span class="category-name">Wood Polisher (By Hand)</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">10</span>
+                        <span class="category-name">Wood Polisher (By Spray)</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Welding / Fabrication -->
+            <div class="category-section">
+                <h2 class="category-section-title">
+                    <span class="emoji">🔥</span>
+                    <span>WELDING / FABRICATION</span>
+                </h2>
+                <div class="categories-grid">
+                    <div class="category-item">
+                        <span class="category-number">1</span>
+                        <span class="category-name">Welder</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">2</span>
+                        <span class="category-name">MIG Welder</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">3</span>
+                        <span class="category-name">Welder 1G to 4G</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">4</span>
+                        <span class="category-name">Welder 6G ARC</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">5</span>
+                        <span class="category-name">Welder 6G TIG + ARC</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">6</span>
+                        <span class="category-name">Welder ARC</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">7</span>
+                        <span class="category-name">Welder MIG (CO2)</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">8</span>
+                        <span class="category-name">Welder Structural</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">9</span>
+                        <span class="category-name">Welder / Plate TIG ARC</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">10</span>
+                        <span class="category-name">Structural Fabricator / Welder</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">11</span>
+                        <span class="category-name">Steel Fabricator / Fitter</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">12</span>
+                        <span class="category-name">Gate Grill Fabricator & Welder</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">13</span>
+                        <span class="category-name">Pipe Fabricator</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">14</span>
+                        <span class="category-name">Sheet Metal Fitter / Fabricator (Cladding)</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">15</span>
+                        <span class="category-name">Gas Cutter (LPG + Oxygen)</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">16</span>
+                        <span class="category-name">Gas Welder (LPG + Oxygen)</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Electrical / Electronics -->
+            <div class="category-section">
+                <h2 class="category-section-title">
+                    <span class="emoji">🔌</span>
+                    <span>ELECTRICAL / ELECTRONICS</span>
+                </h2>
+                <div class="categories-grid">
+                    <div class="category-item">
+                        <span class="category-number">1</span>
+                        <span class="category-name">Building Electrician</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">2</span>
+                        <span class="category-name">House Electrician</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">3</span>
+                        <span class="category-name">Industrial Electrician</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">4</span>
+                        <span class="category-name">Electrical Maintenance Worker</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">5</span>
+                        <span class="category-name">Electric Devices Assembler</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">6</span>
+                        <span class="category-name">Electrical Distribution Board Assembler</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">7</span>
+                        <span class="category-name">Electrical Equipment Assembler</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">8</span>
+                        <span class="category-name">Electrical Transformer Assembly</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">9</span>
+                        <span class="category-name">Electro Mechanic</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">10</span>
+                        <span class="category-name">Electrical Overhead Crane Operator</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">11</span>
+                        <span class="category-name">Electronic Technician</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">12</span>
+                        <span class="category-name">Electronic Equipment Mechanic</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">13</span>
+                        <span class="category-name">Electronic Exchange Assembler</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">14</span>
+                        <span class="category-name">Networking Technician</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">15</span>
+                        <span class="category-name">Computer Hardware / Networking Technician</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">16</span>
+                        <span class="category-name">Computer Operator</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">17</span>
+                        <span class="category-name">Telephone Cable Jointer</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">18</span>
+                        <span class="category-name">Panel Board Technician</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">19</span>
+                        <span class="category-name">Panel Board Termination</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">20</span>
+                        <span class="category-name">Radio Mechanic</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">21</span>
+                        <span class="category-name">T.V. Mechanic</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- HVAC / Cooling -->
+            <div class="category-section">
+                <h2 class="category-section-title">
+                    <span class="emoji">❄️</span>
+                    <span>HVAC / COOLING</span>
+                </h2>
+                <div class="categories-grid">
+                    <div class="category-item">
+                        <span class="category-number">1</span>
+                        <span class="category-name">HVAC Mechanic</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">2</span>
+                        <span class="category-name">A/C Mechanic (Plant)</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">3</span>
+                        <span class="category-name">A/C Mechanic (Window/Split)</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">4</span>
+                        <span class="category-name">A/C Mechanic Auto (Car)</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">5</span>
+                        <span class="category-name">A/C Plant Operator</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">6</span>
+                        <span class="category-name">A.H.U. Technician</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">7</span>
+                        <span class="category-name">H.V.A.C Technician</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">8</span>
+                        <span class="category-name">Refrigerator Mechanic</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">9</span>
+                        <span class="category-name">Water Cooler Mechanic</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Food & Kitchen -->
+            <div class="category-section">
+                <h2 class="category-section-title">
+                    <span class="emoji">🍽️</span>
+                    <span>FOOD & KITCHEN</span>
+                </h2>
+                <div class="categories-grid">
+                    <div class="category-item">
+                        <span class="category-number">1</span>
+                        <span class="category-name">Chef</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">2</span>
+                        <span class="category-name">Cook (Indian)</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">3</span>
+                        <span class="category-name">Cook (Mughlai)</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">4</span>
+                        <span class="category-name">Bakery Man</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">5</span>
+                        <span class="category-name">Butcher</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">6</span>
+                        <span class="category-name">Food & Beverages Counter Server</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">7</span>
+                        <span class="category-name">Kitchen Worker</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tailoring / Fabrication -->
+            <div class="category-section">
+                <h2 class="category-section-title">
+                    <span class="emoji">🧵</span>
+                    <span>TAILORING / FABRICATION</span>
+                </h2>
+                <div class="categories-grid">
+                    <div class="category-item">
+                        <span class="category-number">1</span>
+                        <span class="category-name">Tailor</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">2</span>
+                        <span class="category-name">Tailor (Juki Operator)</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">3</span>
+                        <span class="category-name">Tailor Cutting Master (Ladies/Gents)</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">4</span>
+                        <span class="category-name">Gents Tailor (Cutting Master)</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">5</span>
+                        <span class="category-name">Gents Tailor (Stitching Man)</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">6</span>
+                        <span class="category-name">Curtain Maker (Tailor)</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">7</span>
+                        <span class="category-name">Upholstery Man / Sofa Maker</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">8</span>
+                        <span class="category-name">Embroider (Aari Machine)</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">9</span>
+                        <span class="category-name">Embroider (Embroidery Machine)</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">10</span>
+                        <span class="category-name">Embroider (Hand Needle)</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Metal / Blacksmith -->
+            <div class="category-section">
+                <h2 class="category-section-title">
+                    <span class="emoji">⚒️</span>
+                    <span>METAL / BLACKSMITH</span>
+                </h2>
+                <div class="categories-grid">
+                    <div class="category-item">
+                        <span class="category-number">1</span>
+                        <span class="category-name">Blacksmith</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">2</span>
+                        <span class="category-name">Copper Blacksmith</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">3</span>
+                        <span class="category-name">Haddad Blades</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">4</span>
+                        <span class="category-name">Metal Polisher</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">5</span>
+                        <span class="category-name">Grinder Man</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Manufacturing / Warehouse -->
+            <div class="category-section">
+                <h2 class="category-section-title">
+                    <span class="emoji">🏭</span>
+                    <span>MANUFACTURING / WAREHOUSE</span>
+                </h2>
+                <div class="categories-grid">
+                    <div class="category-item">
+                        <span class="category-number">1</span>
+                        <span class="category-name">Manufacturing Worker</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">2</span>
+                        <span class="category-name">Workshop Worker</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">3</span>
+                        <span class="category-name">Warehouse Worker</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">4</span>
+                        <span class="category-name">Products Assembler</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">5</span>
+                        <span class="category-name">Loding Unloading Worker</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- General Support Jobs -->
+            <div class="category-section">
+                <h2 class="category-section-title">
+                    <span class="emoji">🛠️</span>
+                    <span>GENERAL SUPPORT JOBS</span>
+                </h2>
+                <div class="categories-grid">
+                    <div class="category-item">
+                        <span class="category-number">1</span>
+                        <span class="category-name">Gardener</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">2</span>
+                        <span class="category-name">Key Maker</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">3</span>
+                        <span class="category-name">Laundry Man</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">4</span>
+                        <span class="category-name">Book / Stationery Binder</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">5</span>
+                        <span class="category-name">Glass Cutter Fixer</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">6</span>
+                        <span class="category-name">Office & Facility Cleaner Worker</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">7</span>
+                        <span class="category-name">Seller</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">8</span>
+                        <span class="category-name">Salesman</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">9</span>
+                        <span class="category-name">Store Keeper (Computer Operating)</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Admin / Engineering -->
+            <div class="category-section">
+                <h2 class="category-section-title">
+                    <span class="emoji">👨‍💼</span>
+                    <span>ADMIN / ENGINEERING</span>
+                </h2>
+                <div class="categories-grid">
+                    <div class="category-item">
+                        <span class="category-number">1</span>
+                        <span class="category-name">Manager</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">2</span>
+                        <span class="category-name">Supervisor / Foreman</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">3</span>
+                        <span class="category-name">All Trade Foreman</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">4</span>
+                        <span class="category-name">All Trade Charge Hand</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">5</span>
+                        <span class="category-name">Human Resource Officer</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">6</span>
+                        <span class="category-name">Accountant (With Computer Operator)</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">7</span>
+                        <span class="category-name">AutoCAD Draftsman (Civil)</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">8</span>
+                        <span class="category-name">AutoCAD Draftsman (Electrical)</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">9</span>
+                        <span class="category-name">AutoCAD Draftsman (Mechanical)</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">10</span>
+                        <span class="category-name">Engineer (Civil)</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">11</span>
+                        <span class="category-name">Engineer (Electrical)</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-number">12</span>
+                        <span class="category-name">Engineer (Mechanical)</span>
+                    </div>
+                </div>
+            </div>
+                <!-- <div class="category-item">
                     <span class="category-number">1</span>
                     <span class="category-name">Gardener</span>
                 </div>
@@ -630,7 +1445,7 @@
                 <div class="category-item">
                     <span class="category-number">125</span>
                     <span class="category-name">Water Cooler Mechanic</span>
-                </div>
+                </div> -->
             </div>
         </div>
     </section>
