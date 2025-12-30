@@ -1649,3 +1649,21 @@ footer {
     margin-top: var(--spacing-md);
     text-align: center;
 }
+
+/* E-Brochure Section Responsive */
+@media (max-width: 768px) {
+    .ebrochure-section {
+        padding: 1.5rem !important;
+    }
+    
+    .ebrochure-section > div {
+        flex-direction: column !important;
+        text-align: center !important;
+    }
+    
+    .ebrochure-section img {
+        width: 120px !important;
+        height: 120px !important;
+        margin: 0 auto !important;
+    }
+}
